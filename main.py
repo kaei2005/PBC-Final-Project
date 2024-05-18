@@ -55,7 +55,7 @@ bg_image = pygame.image.load("assets/images/background/background.jpg").convert_
 warrior_sheet = pygame.image.load("assets/images/warrior/Sprites/warrior.png").convert_alpha()
 wizard_sheet = pygame.image.load("assets/images/wizard/Sprites/wizard.png").convert_alpha()
 '''
-martial_hero_sheet = pygame.image.load("assets/images//Sprite/martial_hero.png").convert_alpha()
+martial_hero_sheet = pygame.image.load("assets/images/Martial Hero/Sprite/martial_hero.png").convert_alpha()
 
 #load vicory image
 victory_img = pygame.image.load("assets/images/icons/victory.png").convert_alpha()
