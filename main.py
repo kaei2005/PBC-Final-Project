@@ -58,8 +58,11 @@ wizard_sheet = pygame.image.load("assets/images/wizard/Sprites/wizard.png").conv
 victory_img = pygame.image.load("assets/images/icons/victory.png").convert_alpha()
 
 #define number of steps in each animation
+'''
 WARRIOR_ANIMATION_STEPS = [10, 8, 1, 7, 7, 3, 7]
 WIZARD_ANIMATION_STEPS = [8, 8, 1, 8, 8, 3, 7]
+'''
+MARTIAL_HERO_ANIMATION_STEPS = [10, 8, 3, 7, 7, 3, 11]
 
 #define font
 count_font = pygame.font.Font("assets/fonts/turok.ttf", 80)
