@@ -52,7 +52,6 @@ for idx, path in enumerate(animation_paths):
     frame_height = sprite_sheet.get_height()
     frame_width = sprite_sheet.get_width() // frame_count
 
-    print(f"Character {idx + 1}: {frame_count} frames, frame size: {frame_width}x{frame_height}")
 
     for i in range(frame_count):
         frame = sprite_sheet.subsurface((i * frame_width, 0, frame_width, frame_height))
