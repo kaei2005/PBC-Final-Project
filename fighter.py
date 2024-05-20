@@ -22,7 +22,7 @@ class Fighter():
     self.attack_sound = sound
     self.hit = False
     self.health = 100
-    self.magic = 100
+    self.magic = 0
     self.alive = True
 
 
@@ -186,6 +186,8 @@ class Fighter():
       attacking_rect = pygame.Rect(self.rect.centerx - (2 * self.rect.width * self.flip), self.rect.y, 2 * self.rect.width, self.rect.height)
       if attacking_rect.colliderect(target.rect):
         target.health -= 10
+        targer.magic += 15
+        self.magic += 5
         target.hit = True
 
   
@@ -197,6 +199,7 @@ class Fighter():
       attacking_rect = pygame.Rect(self.rect.centerx - (2 * self.rect.width * self.flip), self.rect.y, 2 * self.rect.width, self.rect.height)
       if attacking_rect.colliderect(target.rect):
         target.health -= 30
+        self.magic = 0
         target.hit = True
 
 
