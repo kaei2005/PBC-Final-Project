@@ -22,6 +22,7 @@ class Fighter():
     self.attack_sound = sound
     self.hit = False
     self.health = 100
+    self.magic = 100
     self.alive = True
 
 
@@ -131,6 +132,8 @@ class Fighter():
   #handle animation updates
   def update(self):
     #check what action the player is performing
+    if self.magic >= 100:
+      self.magic = 100
     if self.health <= 0:
       self.health = 0
       self.alive = False
