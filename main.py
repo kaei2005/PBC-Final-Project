@@ -59,6 +59,7 @@ MEDIEVAL_WARRIOR_SIZE =
 MEDIEVAL_WARRIOR_SCALE =
 MEDIEVAL_WARRIOR_OFFSET = [, ]
 MEDIEVAL_WARRIOR_DATA = [MEDIEVAL_WARRIOR_SIZE, MEDIEVAL_WARRIOR_SCALE, MEDIEVAL_WARRIOR_OFFSET]
+DATA = [EVIL_WIZARD_DATA, HERO_KNIGHT_DATA, MARTIAL_HERO_DATA, MEDIEVAL_KING_DATA, MEDIEVAL_WARRIOR_DATA]
 
 #load music and sounds
 pygame.mixer.music.load("assets/audio/music.mp3")
@@ -82,7 +83,7 @@ hero_knight_sheet = pygame.image.load("").convert_alpha()
 evil_wizard_sheet = pygame.image.load("").convert_alpha()
 medieval_king_sheet = pygame.image.load("").convert_alpha()
 medieval_warrior_sheet = pygame.image.load("").convert_alpha()
-
+sheet = [evil_wizard_sheet, hero_knight_sheet, martial_hero_sheet, medieval_king_sheet, medieval_warrior_sheet]
 #load vicory image
 victory_img = pygame.image.load("assets/images/icons/victory.png").convert_alpha()
 
@@ -96,7 +97,7 @@ HERO_KNIGHT_ANIMATION_STEP = [11, 8, 3, 7, 7, 4, 11]
 EVIL_WIZARD_ANIMATION_STEP = [8, 8, 2, 8, 7, 3, 7]
 MEDIEVAL_KING_ANIMATION_STEP = [8, 8, 2, 4, 4, 4, 6]
 MEDIEVAL_WARRIOR_ANIMATION_STEP = [10, 6, 2, 4, 4, 3, 9]
-
+STEPS = [EVIL_WIZARD_ANIMATION_STEP, HERO_KNIGHT_ANIMATION_STEP, MARTIAL_HERO_ANIMATION_STEPS, MEDIEVAL_KING_ANIMATION_STEP, MEDIEVAL_WARRIOR_ANIMATION_STEP]
 #define font
 count_font = pygame.font.Font("assets/fonts/turok.ttf", 80)
 score_font = pygame.font.Font("assets/fonts/turok.ttf", 30)
@@ -118,10 +119,10 @@ def draw_health_bar(health, x, y):
   pygame.draw.rect(screen, RED, (x, y, 400, 30))
   pygame.draw.rect(screen, YELLOW, (x, y, 400 * ratio, 30))
 
-
+# 幫我檢查
 #create two instances of fighters
-fighter_1 = Fighter(1, 200, 310, False, WARRIOR_DATA, warrior_sheet, WARRIOR_ANIMATION_STEPS, sword_fx)
-fighter_2 = Fighter(2, 700, 310, True, WIZARD_DATA, wizard_sheet, WIZARD_ANIMATION_STEPS, magic_fx)
+fighter_1 = Fighter(player1_character, 200, 310, False, DATA[player1_character - 1], sheet[player1_character - 1], STEPS[player1_character - 1], sword_fx)
+fighter_2 = Fighter(player2_character, 700, 310, True, DATA[player2_character - 1], sheet[player2_character - 1], STEPS[player2_character - 1], magic_fx)
 
 #game loop
 run = True
