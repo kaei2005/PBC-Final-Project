@@ -88,11 +88,12 @@ class Fighter():
           self.jump = True
         #attack
         if key[pygame.K_SPACE] or key[pygame.K_ENTER]:
-          self.attack(target)
           #determine which attack type was used
           if key[pygame.K_SPACE]:
+            self.attack(target)
             self.attack_type = 1
           if key[pygame.K_ENTER]:
+            self.skill(target)
             self.attack_type = 2
 
 
@@ -182,6 +183,16 @@ class Fighter():
         target.health -= 10
         target.hit = True
 
+  
+  def skill(self, target):
+    if self.attack_cooldown == 0:
+      #execute skill
+      self.attacking = True
+      self.attack_sound.play()
+      attacking_rect = pygame.Rect(self.rect.centerx - (2 * self.rect.width * self.flip), self.rect.y, 2 * self.rect.width, self.rect.height)
+      if attacking_rect.colliderect(target.rect):
+        target.health -= 30
+        target.hit = True
 
   def update_action(self, new_action):
     #check if the new action is different to the previous one
