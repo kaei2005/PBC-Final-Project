@@ -4,11 +4,12 @@ class Fighter():
   def __init__(self, player, x, y, flip, data, sprite_sheet, animation_steps, sound):
     self.player = player
     self.size = data[0]
-    self.image_scale = data[1]
-    self.offset = data[2]
+    self.size_y = data[1]
+    self.image_scale = data[2]
+    self.offset = data[3]
     self.flip = flip
     self.animation_list = self.load_images(sprite_sheet, animation_steps)
-    self.action = 0#0:idle #1:run #2:jump #3:attack1 #4: attack2 #5:hit #6:death
+    self.action = 0 #0:idle #1:run #2:jump #3:attack1 #4: attack2 #5:hit #6:death
     self.frame_index = 0
     self.image = self.animation_list[self.action][self.frame_index]
     self.update_time = pygame.time.get_ticks()
@@ -33,8 +34,14 @@ class Fighter():
     for y, animation in enumerate(animation_steps):
       temp_img_list = []
       for x in range(animation):
-        temp_img = sprite_sheet.subsurface(x * self.size, y * self.size, self.size, self.size)
-        temp_img_list.append(pygame.transform.scale(temp_img, (self.size * self.image_scale, self.size * self.image_scale)))
+        #frame_loc = [x * self.size, y * self.size]
+        #img_rec = pygame.Rect(frame_loc, self.size)
+        print(x * self.size, y * self.size_y, self.size, self.size_y)
+        temp_img = sprite_sheet.subsurface(x * self.size, y * self.size_y, self.size, self.size_y)
+        #temp_img = sprite_sheet.subsurface(x * self.size, y * self.size, 1, 1)
+        # temp_img = sprite_sheet.subsurface(img_rec)
+        
+        temp_img_list.append(pygame.transform.scale(temp_img, (self.size * self.image_scale, self.size_y * self.image_scale)))
       animation_list.append(temp_img_list)
     return animation_list
 
@@ -90,12 +97,12 @@ class Fighter():
           self.vel_y = -30
           self.jump = True
         #attack
-        if key[pygame.K_SPACE] or key[pygame.K_ENTER]:
+        if key[pygame.K_SPACE] or key[pygame.K_RSHIFT]:
           #determine which attack type was used
           if key[pygame.K_SPACE]:
             self.attack(target)
             self.attack_type = 1
-          if key[pygame.K_ENTER]:
+          if key[pygame.K_RSHIFT]:
             self.skill(target)
             self.attack_type = 2
 
@@ -186,7 +193,7 @@ class Fighter():
       attacking_rect = pygame.Rect(self.rect.centerx - (2 * self.rect.width * self.flip), self.rect.y, 2 * self.rect.width, self.rect.height)
       if attacking_rect.colliderect(target.rect):
         target.health -= 10
-        targer.magic += 15
+        target.magic += 15
         self.magic += 5
         target.hit = True
 
@@ -199,7 +206,6 @@ class Fighter():
       attacking_rect = pygame.Rect(self.rect.centerx - (2 * self.rect.width * self.flip), self.rect.y, 2 * self.rect.width, self.rect.height)
       if attacking_rect.colliderect(target.rect):
         target.health -= 30
-        self.magic = 0
         target.hit = True
 
 
