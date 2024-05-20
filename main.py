@@ -78,11 +78,11 @@ bg_image = pygame.image.load("assets/images/background/background.jpg").convert_
 warrior_sheet = pygame.image.load("assets/images/warrior/Sprites/warrior.png").convert_alpha()
 wizard_sheet = pygame.image.load("assets/images/wizard/Sprites/wizard.png").convert_alpha()
 '''
-martial_hero_sheet = pygame.image.load("").convert_alpha()
-hero_knight_sheet = pygame.image.load("").convert_alpha()
-evil_wizard_sheet = pygame.image.load("").convert_alpha()
-medieval_king_sheet = pygame.image.load("").convert_alpha()
-medieval_warrior_sheet = pygame.image.load("").convert_alpha()
+martial_hero_sheet = pygame.image.load("assets/images/warriors/Martial Hero/Sprite/Martial Hero 3_image.png").convert_alpha()
+hero_knight_sheet = pygame.image.load("assets/images/warriors/Hero Knight/Sprites/Hero Knight_image.png").convert_alpha()
+evil_wizard_sheet = pygame.image.load("assets/images/warriors/EVil Wizard/Sprites/EVil Wizard 2_image.png").convert_alpha()
+medieval_king_sheet = pygame.image.load("assets/images/warriors/Medieval King Pack/Sprites/Medieval King Pack 2_image.png").convert_alpha()
+medieval_warrior_sheet = pygame.image.load("assets/images/warriors/Medieval Warrior Pack/Sprites/Medieval Warrior Pack 3_image.png").convert_alpha()
 sheet = [evil_wizard_sheet, hero_knight_sheet, martial_hero_sheet, medieval_king_sheet, medieval_warrior_sheet]
 #load vicory image
 victory_img = pygame.image.load("assets/images/icons/victory.png").convert_alpha()
