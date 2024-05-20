@@ -29,6 +29,7 @@ round_over = False
 ROUND_OVER_COOLDOWN = 2000
 
 #define fighter variables
+'''
 WARRIOR_SIZE = 162
 WARRIOR_SCALE = 4
 WARRIOR_OFFSET = [72, 56]
@@ -37,6 +38,11 @@ WIZARD_SIZE = 250
 WIZARD_SCALE = 3
 WIZARD_OFFSET = [112, 107]
 WIZARD_DATA = [WIZARD_SIZE, WIZARD_SCALE, WIZARD_OFFSET]
+'''
+_SIZE = 
+_SCALE =
+_OFFSET = [, ]
+_DATA = [_SIZE, _SCALE, _OFFSET]
 
 #load music and sounds
 pygame.mixer.music.load("assets/audio/music.mp3")
@@ -56,6 +62,10 @@ warrior_sheet = pygame.image.load("assets/images/warrior/Sprites/warrior.png").c
 wizard_sheet = pygame.image.load("assets/images/wizard/Sprites/wizard.png").convert_alpha()
 '''
 martial_hero_sheet = pygame.image.load("assets/images/Martial Hero/Sprite/martial_hero.png").convert_alpha()
+hero_knight_sheet = pygame.image.load("").convert_alpha()
+evil_wizard_sheet = pygame.image.load("").convert_alpha()
+medieval_king_sheet = pygame.image.load("").convert_alpha()
+medieval_warrior_sheet = pygame.image.load("").convert_alpha()
 
 #load vicory image
 victory_img = pygame.image.load("assets/images/icons/victory.png").convert_alpha()
