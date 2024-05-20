@@ -25,6 +25,7 @@ class Fighter():
     self.alive = True
 
 
+
   def load_images(self, sprite_sheet, animation_steps):
     #extract images from spritesheet
     animation_list = []
@@ -138,9 +139,9 @@ class Fighter():
       self.update_action(5)#5:hit
     elif self.attacking == True:
       if self.attack_type == 1:
-        self.update_action(3)#3:attack1
+        self.update_action(3)#3:attack
       elif self.attack_type == 2:
-        self.update_action(4)#4:attack2
+        self.update_action(4)#4:skill
     elif self.jump == True:
       self.update_action(2)#2:jump
     elif self.running == True:
@@ -195,6 +196,17 @@ class Fighter():
         target.health -= 30
         target.hit = True
 
+  def skill(self, target):
+    if """self.attack_cooldown == 0""":
+      #execute skill
+      self.attacking = True
+      self.attack_sound.play()
+      attacking_rect = pygame.Rect(self.rect.centerx - (2 * self.rect.width * self.flip), self.rect.y, 2 * self.rect.width, self.rect.height)
+      if attacking_rect.colliderect(target.rect):
+        target.health -= 30
+        target.hit = True
+
+
   def update_action(self, new_action):
     #check if the new action is different to the previous one
     if new_action != self.action:
@@ -202,6 +214,7 @@ class Fighter():
       #update the animation settings
       self.frame_index = 0
       self.update_time = pygame.time.get_ticks()
+
 
   def draw(self, surface):
     img = pygame.transform.flip(self.image, self.flip, False)
