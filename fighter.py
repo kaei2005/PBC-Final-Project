@@ -190,7 +190,7 @@ class Fighter():
 
   
   def skill(self, target):
-    if """self.attack_cooldown == 0""":
+    if self.magic == 100:
       #execute skill
       self.attacking = True
       self.attack_sound.play()
