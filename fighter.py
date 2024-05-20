@@ -187,16 +187,6 @@ class Fighter():
 
   
   def skill(self, target):
-    if self.attack_cooldown == 0:
-      #execute skill
-      self.attacking = True
-      self.attack_sound.play()
-      attacking_rect = pygame.Rect(self.rect.centerx - (2 * self.rect.width * self.flip), self.rect.y, 2 * self.rect.width, self.rect.height)
-      if attacking_rect.colliderect(target.rect):
-        target.health -= 30
-        target.hit = True
-
-  def skill(self, target):
     if """self.attack_cooldown == 0""":
       #execute skill
       self.attacking = True
