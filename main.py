@@ -39,10 +39,26 @@ WIZARD_SCALE = 3
 WIZARD_OFFSET = [112, 107]
 WIZARD_DATA = [WIZARD_SIZE, WIZARD_SCALE, WIZARD_OFFSET]
 '''
-_SIZE = 
-_SCALE =
-_OFFSET = [, ]
-_DATA = [_SIZE, _SCALE, _OFFSET]
+MARTIAL_HERO_SIZE = 
+MARTIAL_HERO_SCALE =
+MARTIAL_HERO_OFFSET = [, ]
+MARTIAL_HERO_DATA = [MARTIAL_HERO_SIZE, MARTIAL_HERO_SCALE, MARTIAL_HERO_OFFSET]
+HERO_KNIGHT_SIZE = 
+HERO_KNIGHT_SCALE =
+HERO_KNIGHT_OFFSET = [, ]
+HERO_KNIGHT_DATA = [HERO_KNIGHT_SIZE, HERO_KNIGHT_SCALE, HERO_KNIGHT_OFFSET]
+EVIL_WIZARD_SIZE = 
+EVIL_WIZARD_SCALE =
+EVIL_WIZARD_OFFSET = [, ]
+EVIL_WIZARD_DATA = [EVIL_WIZARD_SIZE, EVIL_WIZARD_SCALE, EVIL_WIZARD_OFFSET]
+MEDIEVAL_KING_SIZE = 
+MEDIEVAL_KING_SCALE =
+MEDIEVAL_KING_OFFSET = [, ]
+MEDIEVAL_KING_DATA = [MEDIEVAL_KING_SIZE, MEDIEVAL_KING_SCALE, MEDIEVAL_KING_OFFSET]
+MEDIEVAL_WARRIOR_SIZE = 
+MEDIEVAL_WARRIOR_SCALE =
+MEDIEVAL_WARRIOR_OFFSET = [, ]
+MEDIEVAL_WARRIOR_DATA = [MEDIEVAL_WARRIOR_SIZE, MEDIEVAL_WARRIOR_SCALE, MEDIEVAL_WARRIOR_OFFSET]
 
 #load music and sounds
 pygame.mixer.music.load("assets/audio/music.mp3")
@@ -61,7 +77,7 @@ bg_image = pygame.image.load("assets/images/background/background.jpg").convert_
 warrior_sheet = pygame.image.load("assets/images/warrior/Sprites/warrior.png").convert_alpha()
 wizard_sheet = pygame.image.load("assets/images/wizard/Sprites/wizard.png").convert_alpha()
 '''
-martial_hero_sheet = pygame.image.load("assets/images/Martial Hero/Sprite/martial_hero.png").convert_alpha()
+martial_hero_sheet = pygame.image.load("").convert_alpha()
 hero_knight_sheet = pygame.image.load("").convert_alpha()
 evil_wizard_sheet = pygame.image.load("").convert_alpha()
 medieval_king_sheet = pygame.image.load("").convert_alpha()
