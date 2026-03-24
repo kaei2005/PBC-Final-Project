@@ -18,14 +18,14 @@ Players first review instructions and character abilities, then choose their cha
 
 ## 1. Start Screen｜開始畫面
 
-<img width="997" height="625" alt="Start Screen" src="https://github.com/user-attachments/assets/5253c3e1-39e6-400e-ad64-6a37be6c341d" />
+![Start Screen](rm_image/start_screen.png)
 
 
 ## 2. Character Selection｜選角畫面
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/fb17c082-2a9e-4ce9-a70d-c42b999a59c2" width="45%">
-  <img src="https://github.com/user-attachments/assets/dd357f83-c228-45ab-85b8-dc87bf91f4e3" width="45%">
+  <img src="rm_image/Character_Selection_1.png" width="45%">
+  <img src="rm_image/Character_Selection_2.png" width="45%">
 </div>
 
 
@@ -53,8 +53,8 @@ Players first review instructions and character abilities, then choose their cha
     - 需魔力累積滿才可施放，傷害較高
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/617d8fc8-aa09-4d69-be6e-ca5222eab80f" width="45%">
-  <img src="https://github.com/user-attachments/assets/617d8fc8-aa09-4d69-be6e-ca5222eab80f" width="45%">
+  <img src="rm_image/Gameplay_Mechanics_1.png" width="45%">
+  <img src="rm_image/Gameplay_Mechanics2.png" width="45%">
 </div>
 
 
@@ -65,8 +65,8 @@ Players first review instructions and character abilities, then choose their cha
 ## 4. End Screen｜結束畫面
 
 <div align="center">
-  <img src="(https://github.com/user-attachments/assets/7960dfb3-79f0-4c0c-8ed7-11989f6a2afd)" width="45%">
-  <img src="(https://github.com/user-attachments/assets/c95de713-39a9-4658-b1a3-f09eab153799)" width="45%">
+  <img src="rm_image/End_Screen_1.png" width="45%">
+  <img src="rm_image/End_Screen_2.png" width="45%">
 </div>
 
   
